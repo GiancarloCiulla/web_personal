@@ -1,0 +1,86 @@
+* {
+    background-color: #566246;
+    color: black;
+    align-items: center;
+    list-style: none;
+    
+}
+h2 {
+    position: fixed;
+    text-align: center;
+}
+h1 {
+    align-items: center;
+    justify-content: center;
+}
+
+#menu {
+    list-style-type: none;
+    text-align: center;
+    display: inline;
+    text-align: left;
+    
+     }
+footer {
+    
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+  label {
+    background-color: #4A4A48;
+    color:#F1F2EB;
+  }
+.tituloFormulario {
+     padding-left: 40px;
+     background-color: #4A4A48;
+}
+.formulario {
+ 
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #4A4A48;
+        flex: content;
+        flex-wrap: wrap;
+    }
+    
+h3 {
+        text-align: center;
+   }
+
+img {
+    align-content: center;
+    width: 250px;
+    height: 250px;
+
+}
+img.giancarlo {
+    
+    width: 250px;
+    height: 250px;
+    margin: 120px;
+    top: 150px;
+}
+
+a:hover {
+    color:#F1F2EB
+}
+
+.inicio {
+    width: 50px;
+    height: 50px;
+    background-color: #566246;
+}
+
+img.giancarlo:hover {
+    align-items: center;
+    justify-content: center;
+    padding:8px;
+    background-color: #4A4A48;
+    width: 250px;
+    border: 1px solid #D8DAD3;
+}

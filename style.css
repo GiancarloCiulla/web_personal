@@ -1,14 +1,10 @@
 /* Reset básico para todos los elementos */
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-form {
+* {
     margin: 0;
     padding: 0;
     list-style: none;
+    box-sizing: border-box;
+    
 }
 
 /* Estilos generales */
@@ -19,6 +15,7 @@ body {
     color: #333;
     /* Texto oscuro */
     line-height: 1.6;
+    
 }
 
 /* Estilo del encabezado */
@@ -80,10 +77,9 @@ footer {
     /* Fondo oscuro */
     color: white;
     /* Texto blanco */
-    flex: auto 
+    flex: auto; 
     
-    
-    /* Centrar texto */
+
 
 }
 
@@ -213,7 +209,7 @@ footer li {
     /* Centrar texto */
     max-width: 600px;
     /* Ancho máximo del texto */
-    font-size: x-large;
+    font-size: large;
 }
 
 .gif {

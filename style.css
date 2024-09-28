@@ -1,490 +1,247 @@
-@media only screen and (min-width: 700px) {
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="submit"],
-    select,
-    textarea {
-      width: 80%;
-      height: 45px;
-    }
-  
-    * {
-      font-size: 1.2rem;
-    }
-  
-    #main_picture {
-      width: 70%; 
-    }
-  
-  }
-  
-  @media only screen and (min-width: 1200px) {
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="submit"],
-    select,
-    textarea {
-      width: 50%;
-    }
-  
-    * {
-      font-size: 1.6rem;
-    }
-  
-    #main_picture {
-      width: 45%; 
-    }
-  }
-
-/* Reset básico para todos los elementos */
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    box-sizing: border-box;
-    
-}
-
-/* Estilos generales */
+/* GENERAL */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    /* Fondo suave */
-    color: #333;
-    /* Texto oscuro */
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    height: 100%;
+}
+
+/* Estilo para móviles (hasta 600px) (MEDIA QUERY) */
+@media only screen and (max-width: 600px) {
+    header {
+        text-align: center;
+        background-color: #383F51;
+        color: #AB9F9D;
+        padding: 15px 0;
+    }
+    @media only screen and (max-width: 600px) {
+        /* Ajustes para móviles */
+        nav {
+            flex-direction: column; /* Cambia a columna en móviles */
+            align-items: flex-start; /* Alinea a la izquierda */
+        }
+    }
+    /* --------------------- MEDIA CONTACTO-------------------- */
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .container {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Asegura que la altura mínima sea el 100% de la ventana */
+    }
+
+    main {
+        flex: 1; /* Permite que el main ocupe el espacio restante */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .giancarlo {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin: 15px 0;
+    }
+
+    /* Estilo del menú hamburguesa */
+    nav {
+        display: flex;
+        align-items: center; /* Alinea verticalmente */
+        justify-content: space-between; /* Espacia elementos en el nav */
+    }
     
-}
-
-/* Estilo del encabezado */
-header {
-    background-color: #333;
-    /* Azul suave */
-    padding: 15px 20px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    /* Espacio uniforme entre elementos */
-}
-
-nav a {
-    color: white;
-    /* Texto blanco */
-    text-decoration: none;
-    /* Sin subrayado */
-    padding: 10px 15px;
-    /* Espaciado interno */
-    transition: background-color 0.3s;
-    /* Efecto suave en hover */
-}
-
-nav a:hover {
-    background-color: #357ab8;
-    /* Azul más oscuro en hover */
-}
-
-/*imagen portafolio*/
-.imagenFondoPortafolio {
-    width: 100%;
-    /* Para que ocupe todo el ancho */
-    height: auto;
-    /* Mantiene la proporción de la imagen */
-    display: block;
-    /* Elimina el espacio debajo de la imagen */
-}
-
-/* Estilos del contenido principal */
-main {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.giancarlo {
-    max-width: 150px;
-    /* Tamaño de la imagen de perfil */
-    border-radius: 50%;
-    /* Imagen circular */
-    margin: 20px 0;
-}
-
-/* Estilos del pie de página */
-footer {
-    background-color: #333;
-    /* Fondo oscuro */
-    color: white;
-    /* Texto blanco */
-    flex: auto; 
+    .menu-hamburguesa {
+        display: flex;
+        flex-direction: column; /* Coloca las barras en columna */
+        cursor: pointer;
+        margin-right: 10px; /* Espacio entre el menú y los enlaces */
+    }
     
+    .barra {
+        height: 3px; /* Grosor de las barras */
+        width: 30px; /* Longitud de las barras */
+        background-color: #D1BEB0; /* Color de las barras */
+        margin: 3px 0; /* Espacio entre las barras */
+    }
+    
+    #menu {
+        list-style-type: none; /* Elimina los puntos de la lista */
+        display: flex; /* Hace que los enlaces se alineen en fila */
+        gap: 20px; /* Espacio entre los enlaces */
+    }
+    
+    #menu a {
+        color: white; /* Color de los enlaces */
+        text-decoration: none; /* Sin subrayado */
+    }
+    
+    /* Estilo para mostrar el menú */
+    .menu.show {
+        display: block; /* Muestra el menú */
+    }
 
+    /* Estilo del footer */
+    footer {
+        background-color: #383F51;
+        color: #D1BEB0;
+        padding: 20px 0;
+        text-align: center; /* Centra el texto */
+    }
 
+    .footer-content {
+        max-width: 800px; /* Ancho máximo */
+        margin: 0 auto; /* Centra el contenido */
+        padding: 0 20px; /* Padding lateral */
+    }
+
+    .footer-content p {
+        margin: 10px 0; /* Espaciado vertical */
+    }
+
+    .social-links {
+        list-style-type: none; /* Elimina los puntos de la lista */
+        padding: 0; /* Elimina el padding */
+        display: flex; /* Usa flexbox para alinear */
+        justify-content: center; /* Centra horizontalmente */
+        gap: 15px; /* Espacio entre enlaces */
+    }
+
+    .social-links li a {
+        color: #D1BEB0; /* Color de los enlaces */
+        text-decoration: none; /* Elimina subrayado */
+    }
+
+    .social-links li a:hover {
+        text-decoration: underline; /* Subraya al pasar el ratón */
+    }
 }
 
-footer h3 {
-    margin-bottom: 10px;
-}
-
-footer ul {
-    display: flex;
-    justify-content: center;
-    /* Centrar redes sociales */
-}
-
-footer li {
-    margin: 0 10px;
-    /* Espaciado entre íconos */
-}
-
-.redesSociales {
-    width: 30px;
-    /* Tamaño uniforme de íconos */
-    height: auto;
-    /* Mantener proporciones */
-}
-
-/* Estilos específicos para el formulario */
-.tituloFormulario {
-    text-align: center;
-
-}
-
-.formulario {
-    max-width: 400px;
-    /* Ancho máximo del formulario */
-    margin: 20px auto;
-    /* Centramos el formulario */
-    background: #fff;
-    /* Fondo blanco */
-    padding: 30px;
-    /* Espaciado interno */
-    border-radius: 8px;
-    /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
-}
-
-.formulario label {
-    display: block;
-    /* Cada etiqueta en su línea */
-    margin-bottom: 5px;
-    /* Espacio inferior */
-}
-
-.formulario input,
-.formulario textarea {
-    width: 100%;
-    /* Ancho completo */
-    padding: 10px;
-    /* Espaciado interno */
-    margin-bottom: 15px;
-    /* Espacio inferior */
-    border: 1px solid #ccc;
-    /* Borde gris */
-    border-radius: 4px;
-    /* Bordes redondeados */
-}
-
-.formulario button {
-    background-color: #4a90e2;
-    /* Azul para el botón */
-    color: white;
-    /* Texto blanco */
-    border: none;
-    /* Sin borde */
-    padding: 10px 15px;
-    /* Espaciado interno */
-    cursor: pointer;
-    /* Cambiar cursor al pasar el ratón */
-    transition: background-color 0.3s;
-    /* Efecto suave en hover */
-}
-
-.formulario button:hover {
-    background-color: #357ab8;
-    /* Azul más oscuro en hover */
-}
-
-/* Estilos de la sección de biografía */
+/*------------------------BIOGRAFIA------------------------------------------------ */
 .img_bio {
     position: relative;
-    text-align: center;
+    height: 100vh; /* Altura completa de la ventana */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
 }
 
 .full-screen-img {
     width: 100%;
-    /* Imagen de ancho completo */
-    height: auto;
-    /* Mantener proporciones */
-}
-
-
-
-.overlay {
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Fondo oscuro semi-transparente */
-    color: white;
-    /* Texto blanco */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Centrar verticalmente */
-    align-items: center;
-    /* Centrar horizontalmente */
-    padding: 20px;
-    /* Espaciado interno */
-}
-
-.bio-text {
-    margin-top: 10px;
-    /* Espacio entre los párrafos */
-    text-align: center;
-    /* Centrar texto */
-    max-width: 600px;
-    /* Ancho máximo del texto */
-    font-size: large;
-}
-
-.gif {
-
-    display: grid;
-    margin: auto;
-    border: 2px solid #ccc;
-    /* Borde opcional */
-    border-radius: 8px;
-
-}
-
-/* Reset básico 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-// Estilo del cuerpo 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-}
-
-// Estilo del header y nav 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-}
-
-#menu {
-    list-style: none;
-    display: flex;
-}
-
-#menu li {
-    margin: 0 15px;
-}
-
-#menu a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 15px;
-    transition: background 0.3s;
-}
-
-#menu a:hover {
-    background: #555;
-    border-radius: 5px;
-}
-
-// Estilo para la sección de biografía 
-.img_bio {
-    position: relative;
-    width: 100%;
-    height: 100vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    background: url('/Media/istockphoto-1289158222-1024x1024.jpg') no-repeat center center;
-    background-size: cover; 
-    color: white; 
+    z-index: 1; /* Envía la imagen al fondo */
 }
 
 .overlay {
+    margin-left: 2px;
+    position: absolute;
+    top: 0; /* Ajusta a la parte superior */
+    left: 0; /* Ajusta a la parte izquierda */
+    width: 90%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa todo el alto */
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); 
-    padding: 20px;
-    border-radius: 10px;
+    z-index: 2; /* Asegura que el texto esté encima de la imagen */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 10px; /* Elimina bordes redondeados */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    transition: transform 0.3s ease; /* Suaviza la animación */
+    display: flex; /* Habilita flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
 }
 
-.overlay h1 {
-    font-size: 2.5rem; 
-    margin-bottom: 10px; 
+.overlay:hover {
+    transform: translate(-50%, -50%) scale(1.05); /* Efecto de aumento al pasar el ratón */
 }
 
-.overlay p {
-    font-size: 1.2rem; 
+.bio-text {
+    font-size: 10em; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
 }
 
+/* Estilo responsivo para texto */
+@media only screen and (max-width: 600px) {
+    .bio-text {
+        font-size: 1em; /* Ajusta el tamaño en móviles */
+    }
+}
 
-h2.tituloFormulario {
-    text-align: center;
-    margin: 20px 0;
+/* --------------------CONTACTO------------- */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
 }
 
 .formulario {
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.formulario label {
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
     display: block;
-    margin-bottom: 5px;
+    margin: 15px 0 5px;
 }
 
-.formulario input,
-.formulario textarea {
+input, select, textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
 
-.formulario button {
+fieldset {
+    border: none;
+    margin: 15px 0;
+    padding: 0;
+}
+
+legend {
+    font-weight: bold;
+}
+
+button {
     width: 100%;
     padding: 10px;
-    background: #333;
+    background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
-.formulario button:hover {
-    background: #555;
+button:hover {
+    background-color: #218838;
 }
 
-/* Estilo del footer 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-
-
-
-
-
-
-/* {
-    background-color: #566246;
-    color: black;
-    align-items: center;
-    list-style: none;
-    
-}
-h2 {
-    position: fixed;
-    text-align: center;
-}
-h1 {
-    align-items: center;
-    justify-content: center;
-}
-
-#menu {
-    list-style-type: none;
-    text-align: center;
-    display: inline;
-    text-align: left;
-    
-     }
-footer {
-    
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
-  }
-  label {
-    background-color: #4A4A48;
-    color:#F1F2EB;
-  }
-.tituloFormulario {
-     padding-left: 40px;
-     background-color: #4A4A48;
-}
-.formulario {
- 
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 20px;
-        background-color: #4A4A48;
-        flex: content;
-        flex-wrap: wrap;
-    }
-    
-h3 {
-        text-align: center;
-   }
-
-img {
-    align-content: center;
-    width: 250px;
-    height: 250px;
-
-}
-img.giancarlo {
-    
-    width: 250px;
-    height: 250px;
-    margin: 120px;
-    top: 150px;
-}
-
-a:hover {
-    color:#F1F2EB
-}
-
-.inicio {
-    width: 50px;
-    height: 50px;
-    background-color: #566246;
-}
-
-img.giancarlo:hover {
-    align-items: center;
-    justify-content: center;
-    padding:8px;
-    background-color: #4A4A48;
-    width: 250px;
-    border: 1px solid #D8DAD3;
-}
-.img_bio {
-    height: 100vh
-}
+/* Estilos responsivos */

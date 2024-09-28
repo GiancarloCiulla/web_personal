@@ -8,14 +8,14 @@ body {
 }
 
 /* Estilo para móviles (hasta 600px) (MEDIA QUERY) */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 400px) {
     header {
         text-align: center;
         background-color: #383F51;
         color: #AB9F9D;
         padding: 15px 0;
     }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (min-width: 400px) {
         /* Ajustes para móviles */
         nav {
             flex-direction: column; /* Cambia a columna en móviles */
@@ -178,7 +178,7 @@ body {
 }
 
 /* Estilo responsivo para texto */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
     .bio-text {
         font-size: 1em; /* Ajusta el tamaño en móviles */
     }
@@ -194,7 +194,7 @@ body {
 }
 
 .formulario {
-    max-width: 600px;
+    min-width: 600px;
     margin: auto;
     padding: 30px;
     background: white;

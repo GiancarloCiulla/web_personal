@@ -4,25 +4,21 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-    height: 100%;
 }
 
-/* Estilo para móviles (hasta 600px) (MEDIA QUERY) */
-@media only screen and (max-width: 400px) {
+/* Estilo para móviles (hasta 600px) */
+@media only screen and (max-width: 600px) {
     header {
         text-align: center;
         background-color: #383F51;
         color: #AB9F9D;
         padding: 15px 0;
     }
-    @media only screen and (max-width: 400px) {
-        /* Ajustes para móviles */
-        nav {
-            flex-direction: column; /* Cambia a columna en móviles */
-            align-items: flex-start; /* Alinea a la izquierda */
-        }
+
+    nav {
+        flex-direction: column; /* Cambia a columna en móviles */
+        align-items: flex-start; /* Alinea a la izquierda */
     }
-    /* --------------------- MEDIA CONTACTO-------------------- */
 
     h1 {
         font-size: 24px;
@@ -63,32 +59,33 @@ body {
         align-items: center; /* Alinea verticalmente */
         justify-content: space-between; /* Espacia elementos en el nav */
     }
-    
+
     .menu-hamburguesa {
         display: flex;
         flex-direction: column; /* Coloca las barras en columna */
         cursor: pointer;
         margin-right: 10px; /* Espacio entre el menú y los enlaces */
     }
-    
+
     .barra {
         height: 3px; /* Grosor de las barras */
         width: 30px; /* Longitud de las barras */
         background-color: #D1BEB0; /* Color de las barras */
         margin: 3px 0; /* Espacio entre las barras */
     }
-    
+
     #menu {
         list-style-type: none; /* Elimina los puntos de la lista */
         display: flex; /* Hace que los enlaces se alineen en fila */
+        flex-wrap: wrap; /* Permite el ajuste de líneas */
         gap: 20px; /* Espacio entre los enlaces */
     }
-    
+
     #menu a {
         color: white; /* Color de los enlaces */
         text-decoration: none; /* Sin subrayado */
     }
-    
+
     /* Estilo para mostrar el menú */
     .menu.show {
         display: block; /* Muestra el menú */
@@ -178,23 +175,15 @@ body {
 }
 
 /* Estilo responsivo para texto */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .bio-text {
-        font-size: 1em; /* Ajusta el tamaño en móviles */
+        font-size: 2em; /* Ajusta el tamaño en móviles */
     }
 }
 
 /* --------------------CONTACTO------------- */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
-
 .formulario {
-    min-width: 600px;
+    max-width: 600px; /* Cambiado a max-width */
     margin: auto;
     padding: 30px;
     background: white;
@@ -243,5 +232,4 @@ button {
 button:hover {
     background-color: #218838;
 }
-
 /* Estilos responsivos */

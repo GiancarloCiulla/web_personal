@@ -7,7 +7,7 @@ body {
 }
 
 /* Estilo para móviles (hasta 600px) */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 320px) {
     header {
         text-align: center;
         background-color: #383F51;

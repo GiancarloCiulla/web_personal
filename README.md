@@ -30,7 +30,6 @@
 <p>
   ¡Hola! Soy Giancarlo Ciulla, un apasionado de la tecnología y el desarrollo de software. Me encanta aprender nuevas herramientas y compartir mis conocimientos con la comunidad. Siempre estoy buscando nuevos desafíos y oportunidades para crecer. ¡Bienvenido a mi perfil!
 </p>
----
 
 ### 🔧 Languages and Tools :
 <div>

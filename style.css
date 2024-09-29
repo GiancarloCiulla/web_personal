@@ -100,7 +100,7 @@ body {
     }
 
     .footer-content {
-        max-width: 800px; /* Ancho máximo */
+        min-width: 320px; /* Ancho máximo */
         margin: 0 auto; /* Centra el contenido */
         padding: 0 20px; /* Padding lateral */
     }
@@ -175,7 +175,7 @@ body {
 }
 
 /* Estilo responsivo para texto */
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 320px) {
     .bio-text {
         font-size: 2em; /* Ajusta el tamaño en móviles */
     }
@@ -183,7 +183,7 @@ body {
 
 /* --------------------CONTACTO------------- */
 .formulario {
-    max-width: 600px; /* Cambiado a max-width */
+    min-width: 320px; 
     margin: auto;
     padding: 30px;
     background: white;

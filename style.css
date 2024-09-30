@@ -170,7 +170,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .bio-text {
     font-size: 2em;
     line-height: 1.5;
@@ -234,4 +233,35 @@ button {
 
 button:hover {
     background-color: #218838;
+}
+
+/* -----------PORTFOLIO------------ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.carrusel {
+    display: flex;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Habilita el "scroll snap" */
+}
+
+.imagen {
+    flex: 0 0 auto; /* Impide que las imágenes se compriman */
+    margin: 10px;
+    position: relative;
+    scroll-snap-align: start; /* Alineación de las imágenes */
+    transition: transform 0.3s; /* Transición suave */
+}
+
+.imagen img {
+    display: block;
+    width: 200px; /* Ajusta el tamaño de las imágenes */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.imagen:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en hover */
 }
